@@ -17,6 +17,7 @@
 	text-decoration: none
 }
 
+
 .STYLE1 {
 	font-family: "微软雅黑"
 }
@@ -44,7 +45,7 @@
 p {
 	text-indent: 2em
 }
-.anserListTable{
+.anserListTable {
 	border: 1px #CCC solid;
 	font-family: "微软雅黑";
 }
