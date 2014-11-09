@@ -1,8 +1,3 @@
-/*
-SQLyog Enterprise - MySQL GUI v7.14 
-MySQL - 5.0.18-nt : Database - sds
-*********************************************************************
-*/
 /*!40101 SET NAMES utf8 */;
 
 /*!40101 SET SQL_MODE=''*/;
