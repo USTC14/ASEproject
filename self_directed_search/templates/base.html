@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title> {% load staticfiles %}
+<style type="text/css">
+.a-tips-Article-QQ:link {
+	color: #66CCFF;
+	border-bottom: 1px dotted #0781C7;
+	text-decoration: none
+}
+
+.a-tips-Article-QQ:hover {
+	color: #66CCFF;
+	background: #EBF2FA;
+	text-decoration: none
+}
+
+.a-tips-Article-QQ:visited {
+	color: #66CCFF;
+	border-bottom: 1px dotted #0781C7;
+	text-decoration: none
+}
+
+.STYLE1 {
+	font-family: "微软雅黑"
+}
+
+.STYLE2 {
+	font-size: 15px
+}
+
+.style123w {
+	height: 100%;
+	border: 1px #CCC solid;
+	padding: 8px;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 1.8;
+	font-family: "微软雅黑"
+}
+</style>
+<style>
+.style1 {
+	font-size: 11pt;
+	line-height: 1.8;
+}
+
+p {
+	text-indent: 2em
+}
+</style>
+
+<script language="JavaScript">
+	function linkTo(y) {
+
+		window.location.hash = y;
+	}
+
+	function form_check() {
+		debugger;
+		var a = document.getElementsByTagName("INPUT");
+		var b = document.getElementsByTagName("STRONG");
+		for (var i = 0; i < a.length; i++) {
+			var tmpStr;
+			var j = i / 2;
+			tmpStr = a[i].name;
+			var strongid = b[j];
+			var tmpjuanbiao = tmpStr + "juanbiao";
+			if (a[i].type == "radio"
+					&& eval("document.form1." + tmpStr + "[0].checked") == false
+					&& eval("document.form1." + tmpStr + "[1].checked") == false) {
+				alert("问题'" + tmpStr + "'没有选择");
+				linkTo(tmpjuanbiao);
+				strongid.style.color = "#ff0000";
+				return false;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<table
+		style="width: 771px; margin: 5px 0px 15px 5px; margin-left: auto; margin-right: auto"
+		align="center">
+		<tr>
+			<td>
+				<div class="style123w" style="width: 771px; border-top: 0px;">
+
+					<br>
+					<h2 align="center">霍兰德职业兴趣测试</h2>
+					<br> <br>
+					<div style="padding: 10px;">
+
+						<table style="FLOAT: left; MARGIN: 20px 25px 10px 0px" width="300"
+							bgcolor="#dddddd" cellpadding="0" cellspacing="5">
+							<tbody>
+								<tr>
+									<td><img src="{% static 'img/a.jpg' %}" align="center"
+										width="300" style="border: 0px solid #333333;" alt="My image" /></td>
+								</tr>
+								<tr>
+									<td
+										style="FONT-SIZE: 9pt; LINE-HEIGHT: 12pt; FONT-FAMILY: Arial, 宋体; font-weight: none; color: #2F4F4F">霍兰德六边形图实例
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>霍兰德职业适应性测验(The Self-Directed Search，简称SDS)由美国著名职业指导专家
+							Ｊ.霍兰德（ＨＯＬＬＡＮＤ）编制。在几十年间经过一百多次大规模的实验研究，形成了人格类型与职业类型的学说和测验。
+							该测验能帮助被试者发现和确定自己的职业兴趣和能力专长, 从而科学地做出求职择业。</p>
+						<p>霍兰德在其一系列关于人格与职业关系的假设的基础上，提出了六种基本的职业类型，即：实际型、研究型、艺术型、社会型、企业型、传统型。</p>
+
+						<p>霍兰德职业兴趣SDS测试一般是适合于高中生，通过此测试可以让高中生确定自己的兴趣爱好，给大学的专业选择提供参考。目前我们国内的很多高中已经在实施霍兰德职业兴趣测试了，这是好的开始。如果你是大学生大一、大二的话也可以测一下，及时进行调整。
+						</p>
+
+						<br>
+						<hr>
+						<p>
+							<b>测试说明：</b>
+						</p>
+						<p>人格和职业有着密切的关系，不同职业对从业者的人格特征的要求是有差距的，如果通过科学的测试，可以预知自己的人格特征，这有助于选择适合于个人发展的职业，您将参与测试的这个《职业兴趣倾向量表》，可以帮助您作一次简单的人格自评，从而更加清楚自己的人格特征更适合从事哪方面的工作。</p>
+
+						<p>请根据对每一题目的第一印象作答，不必仔细推敲，答案没有好坏、对错之分。根据自己的实际情况回答“是”或“否”。</p>
+
+						{% block content %}{% endblock %} {% block footer %}
+						<p align="center">
+							<a class="a-tips-Article-QQ" href="http://www.hdu.edu.com/"
+								target="_blank">&#169;2014 联系作者 </a>
+						</p>
+					</div>
+				</div> <br> <br> {% endblock %}
+	</table>
+</body>
+</html>
