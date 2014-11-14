@@ -19,3 +19,6 @@ urlpatterns = patterns('',
     url(r'^questionmatch/$',questionMatch)
     
 )
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
